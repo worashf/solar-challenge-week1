@@ -1,0 +1,14 @@
+name: solar-challenge-week1
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - jupyter
+  - pip
+  - pip:
+    - python-dotenv
