@@ -1,12 +1,30 @@
-name: CI  
-on: [push, pull_request]  
-jobs:  
-  test:  
-    runs-on: ubuntu-latest  
-    steps:  
-      - uses: actions/checkout@v4  
-      - uses: actions/setup-python@v4  
-        with:  
-          python-version: "3.12.7"  
-      - run: pip install -r requirements.txt  
-      - run: python --version  
+# Solar Dashboard Deployment Guide
+
+## Requirements
+- Python 3.10+
+- Streamlit
+- Pandas, Matplotlib, Seaborn
+
+## Installation
+```bash
+pip install -r requirements.txt
+```
+
+## Running Locally
+```bash
+streamlit run app/main.py
+```
+
+## Deployment to Streamlit Cloud
+1. Create a new app in [Streamlit Community Cloud](https://share.streamlit.io/)
+2. Connect your GitHub repository
+3. Set main file path to `app/main.py`
+4. Deploy!
+
+## Folder Structure
+```
+├── app/
+│   ├── main.py         # Dashboard entry point
+│   ├── utils.py        # Data processing
+└── data/               # CSV datasets (gitignored)
+```
